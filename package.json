@@ -1,0 +1,23 @@
+{
+  "name": "worldcup2022data",
+  "version": "1.0.0",
+  "description": "Qatar world cup 2022 data from FIFA official site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishenal/worldCup2022Data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fishenal/worldCup2022Data/issues"
+  },
+  "homepage": "https://github.com/fishenal/worldCup2022Data#readme",
+  "dependencies": {
+    "axios": "^1.2.0"
+  }
+}
