@@ -13,7 +13,7 @@ npm run app // or node ./index.js
 
 # Team average data calculate by this script
 ## 32 Teams Avarage Data
-```JSON
+```javascript
 {
   ARG: {
     averageHeight: '178.92',
@@ -179,7 +179,7 @@ npm run app // or node ./index.js
 ```
 
 ## Average Data Sorted
-```JSON
+```javascript
 [ sortByHeight ]: [
   [ 'MEX', '178.81' ],
   [ 'ARG', '178.92' ],
