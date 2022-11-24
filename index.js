@@ -33,6 +33,19 @@ function getAge(dateString) {
     return age;
 }
 
+function shrinkPlayer(player) {
+    // console.log('%c [ player ]-37', 'font-size:13px; background:pink; color:#bf2c9f;', player)
+    return {
+        position: player.PositionLocalized[0].Description,
+        birthDate: player.BirthDate,
+        jerseyNum: player.JerseyNum,
+        name: player.PlayerName[0].Description,
+        picture: player.PlayerPicture.PictureUrl,
+        weight: player.Weight,
+        height: player.Height,
+        country: player.IdCountry
+    }
+}
 // getSquadByTeamId('43922');
 fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
     if (err) {
@@ -41,6 +54,21 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
     }
     const teams = JSON.parse(jsonString);
     const averageData = {};
+    const players = {
+        maxHeight: [],
+        minHeight: [],
+        minWeight: [],
+        maxWeight: [],
+        minAge: [],
+        maxAge: []
+    }
+    let minHeight = Infinity;
+    let maxHeight = 0;
+    let minWeight = Infinity;
+    let maxWeight = 0;
+    let minAge = Infinity;
+    let maxAge = 0;
+
     teams.forEach(item => {
         let totalHeight = 0;
         let totalWeight = 0;
@@ -49,7 +77,56 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
         item.Players.forEach((player) => {
             totalHeight += player.Height;
             totalWeight += player.Weight;
-            totalAge += getAge(player.BirthDate);
+            const age = getAge(player.BirthDate);
+            totalAge += age;
+            if (player.Height >= maxHeight) {
+                if (player.Height === maxHeight) {
+                    players.maxHeight.push(shrinkPlayer(player))
+                } else {
+                    maxHeight = player.Height;
+                    players.maxHeight = [shrinkPlayer(player)]
+                }
+            }
+            if (player.Height <= minHeight) {
+                if (player.Height === minHeight) {
+                    players.minHeight.push(shrinkPlayer(player))
+                } else {
+                    minHeight = player.Height;
+                    players.minHeight = [shrinkPlayer(player)]
+                }
+            }
+            if (player.Weight >= maxWeight) {
+                if (player.Weight === maxWeight) {
+                    players.maxWeight.push(shrinkPlayer(player))
+                } else {
+                    maxWeight = player.Weight;
+                    players.maxWeight = [shrinkPlayer(player)]
+                }
+            }
+            if (player.Weight <= minWeight) {
+                if (player.Weight === minWeight) {
+                    players.minWeight.push(shrinkPlayer(player))
+                } else {
+                    minWeight = player.Weight;
+                    players.minWeight = [shrinkPlayer(player)]
+                }
+            }
+            if (age >= maxAge) {
+                if (age === maxAge) {
+                    players.maxAge.push(shrinkPlayer(player))
+                } else {
+                    maxAge = age;
+                    players.maxAge = [shrinkPlayer(player)]
+                }
+            }
+            if (age <= minAge) {
+                if (age === minAge) {
+                    players.minAge.push(shrinkPlayer(player))
+                } else {
+                    minAge = age;
+                    players.minAge = [shrinkPlayer(player)]
+                }
+            }
         });
         averageData[item.IdCountry] = {
             averageHeight: (totalHeight / playerNum).toFixed(2),
@@ -75,8 +152,9 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
     sortByAge.sort(function(a, b) {
         return Number(a[1].averageAge) - Number(b[1].averageAge);
     });
-    console.log("Average data:", averageData);
-    console.log('%c [ sortByHeight ]-54', 'font-size:13px; background:pink; color:#bf2c9f;', sortByHeight)
-    console.log('%c [ sortByWeight ]-58', 'font-size:13px; background:pink; color:#bf2c9f;', sortByWeight)
-    console.log('%c [ sortByAge ]-77', 'font-size:13px; background:pink; color:#bf2c9f;', sortByAge)
+    // console.log("Average data:", averageData);
+    console.log("Edge players data:", players);
+    // console.log('%c [ sortByHeight ]-54', 'font-size:13px; background:pink; color:#bf2c9f;', sortByHeight)
+    // console.log('%c [ sortByWeight ]-58', 'font-size:13px; background:pink; color:#bf2c9f;', sortByWeight)
+    // console.log('%c [ sortByAge ]-77', 'font-size:13px; background:pink; color:#bf2c9f;', sortByAge)
 });

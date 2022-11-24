@@ -283,3 +283,150 @@ npm run app // or node ./index.js
   [ 'IRN', '28.92' ]
 ]
 ```
+## Max/Min players Data
+```
+EdgePlayersData: {
+  maxHeight: [
+    {
+      position: 'Goalkeeper',
+      birthDate: '1994-04-07T00:00:00Z',
+      jerseyNum: 23,
+      name: 'Andries NOPPERT',
+      picture: 'https://digitalhub.fifa.com/transform/da635e9a-bcf8-4d17-8213-0175293efe7c/1442167721',
+      weight: 78,
+      height: 203,
+      country: 'NED'
+    }
+  ],
+  minHeight: [
+    {
+      position: 'Midfielder',
+      birthDate: '1997-10-30T00:00:00Z',
+      jerseyNum: 13,
+      name: 'Ilias CHAIR',
+      picture: 'https://digitalhub.fifa.com/transform/02b330d8-ee72-471a-b822-eec280201d93/Morocco-Portraits-FIFA-World-Cup-Qatar-2022',
+      weight: 64,
+      height: 164,
+      country: 'MAR'
+    }
+  ],
+  minWeight: [
+    {
+      position: 'Forward',
+      birthDate: '1995-10-18T00:00:00Z',
+      jerseyNum: 11,
+      name: 'Christian BASSOGOG',
+      picture: 'https://digitalhub.fifa.com/transform/455f54f5-80f0-495c-bb03-5a4fdf188706/1443092549',
+      weight: 58,
+      height: 178,
+      country: 'CMR'
+    },
+    {
+      position: 'Midfielder',
+      birthDate: '1999-05-10T00:00:00Z',
+      jerseyNum: 19,
+      name: 'Sebastian SZYMANSKI',
+      picture: 'https://digitalhub.fifa.com/transform/46aa0a38-2fd4-4128-a3cf-07b65c3b1ddd/1442528061',
+      weight: 58,
+      height: 174,
+      country: 'POL'
+    }
+  ],
+  maxWeight: [
+    {
+      position: 'Forward',
+      birthDate: '1993-05-13T00:00:00Z',
+      jerseyNum: 9,
+      name: 'Romelu LUKAKU',
+      picture: 'https://digitalhub.fifa.com/transform/e637e01c-e572-4184-846c-88442174fa7e/1442831418',
+      weight: 103,
+      height: 190,
+      country: 'BEL'
+    },
+    {
+      position: 'Defender',
+      birthDate: '1988-01-01T00:00:00Z',
+      jerseyNum: 19,
+      name: 'Kendall WASTON',
+      picture: 'https://digitalhub.fifa.com/transform/51107113-925f-45cb-bea3-1e3fcc8022a6/1442776008',
+      weight: 103,
+      height: 196,
+      country: 'CRC'
+    }
+  ],
+  minAge: [
+    {
+      position: 'Forward',
+      birthDate: '2004-09-15T00:00:00Z',
+      jerseyNum: 21,
+      name: 'Garang KUOL',
+      picture: 'https://digitalhub.fifa.com/transform/f9d1ba76-fd8b-4c99-9b65-d89693f1374b/Australia-Portraits-FIFA-World-Cup-Qatar-2022',
+      weight: 68,
+      height: 175,
+      country: 'AUS'
+    },
+    {
+      position: 'Midfielder',
+      birthDate: '2004-06-15T00:00:00Z',
+      jerseyNum: 9,
+      name: 'Jewison BENNETTE',
+      picture: 'https://digitalhub.fifa.com/transform/2c407cb1-8c87-48a7-a447-8dc5a491903c/1442776774',
+      weight: 65,
+      height: 173,
+      country: 'CRC'
+    },
+    {
+      position: 'Midfielder',
+      birthDate: '2004-08-05T00:00:00Z',
+      jerseyNum: 9,
+      name: 'GAVI',
+      picture: 'https://digitalhub.fifa.com/transform/3accf767-b78f-4bf4-87f8-25ab808366c4/1442551912',
+      weight: 70,
+      height: 173,
+      country: 'ESP'
+    },
+    {
+      position: 'Forward',
+      birthDate: '2004-11-20T00:00:00Z',
+      jerseyNum: 26,
+      name: 'Youssoufa MOUKOKO',
+      picture: 'https://digitalhub.fifa.com/transform/35376ae6-3e53-4ded-bb6f-74781cf6fd2c/1442303673',
+      weight: 72,
+      height: 179,
+      country: 'GER'
+    },
+    {
+      position: 'Midfielder',
+      birthDate: '2004-03-08T00:00:00Z',
+      jerseyNum: 7,
+      name: 'Abdul Fatawu ISSAHAKU',
+      picture: 'https://digitalhub.fifa.com/transform/a1170cda-d5bd-4aed-8431-689b64d2cecc/1443098323',
+      weight: 73,
+      height: 177,
+      country: 'GHA'
+    },
+    {
+      position: 'Midfielder',
+      birthDate: '2004-05-10T00:00:00Z',
+      jerseyNum: 23,
+      name: 'Bilal EL KHANNOUSS',
+      picture: 'https://digitalhub.fifa.com/transform/73517f96-2f41-408a-b9c8-a2a85fc315bd/Morocco-Portraits-FIFA-World-Cup-Qatar-2022',
+      weight: 70,
+      height: 180,
+      country: 'MAR'
+    }
+  ],
+  maxAge: [
+    {
+      position: 'Goalkeeper',
+      birthDate: '1982-09-18T00:00:00Z',
+      jerseyNum: 1,
+      name: 'Alfredo TALAVERA',
+      picture: 'https://digitalhub.fifa.com/transform/b5ff7388-c2c0-45e1-ba1c-c1a4a13ab634/1442569767',
+      weight: 84,
+      height: 188,
+      country: 'MEX'
+    }
+  ]
+}
+```
