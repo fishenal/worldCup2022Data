@@ -42,6 +42,7 @@
                 squads[k].forEach((p) => {
                     $(`#${k}-wrap`).append(`
                         <div class='player-wrap'>
+                            <img src=${p.picture} loading="lazy" class="avatar"/>
                             <p>name: ${p.name}</p>
                             <p>age: ${p.age}</p>
                             <p>jerseyNum: ${p.jerseyNum}</p>
