@@ -5,6 +5,9 @@ Qatar world cup 2022 data from FIFA official site
 - rawData/: raw data from FIFA official site API
 - worldcup.json: combined rawData
 - solvedData/: data solved by this script
+  - averageData.json
+  - maxMinData.json highest/shortest, etc.
+  - squadsData.json fine data to read from rawData
 - index.js: node.js script to calculate teams; average height/weight/age, etc.
 
 # Run

@@ -62,6 +62,7 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
         minAge: [],
         maxAge: []
     }
+    const squads = {};
     let minHeight = Infinity;
     let maxHeight = 0;
     let minWeight = Infinity;
@@ -78,6 +79,9 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
             totalHeight += player.Height;
             totalWeight += player.Weight;
             const age = getAge(player.BirthDate);
+            if (!squads[item.IdCountry]) { squads[item.IdCountry] = [] }
+            squads[item.IdCountry].push({ ...shrinkPlayer(player), age });
+
             totalAge += age;
             if (player.Height >= maxHeight) {
                 if (player.Height === maxHeight) {
@@ -152,9 +156,17 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
     sortByAge.sort(function(a, b) {
         return Number(a[1].averageAge) - Number(b[1].averageAge);
     });
+    // console.log('%c [ squads ]-84', 'font-size:13px; background:pink; color:#bf2c9f;', squads)
     // console.log("Average data:", averageData);
     // console.log("Edge players data:", players);
     fs.writeFile('./solvedData/maxMinData.json', JSON.stringify(players, null, 2), err => {
+        if (err) {
+            console.log('Error writing file', err)
+        } else {
+            console.log('Successfully wrote file')
+        }
+    })
+    fs.writeFile('./solvedData/squadsData.json', JSON.stringify(squads, null, 2), err => {
         if (err) {
             console.log('Error writing file', err)
         } else {
