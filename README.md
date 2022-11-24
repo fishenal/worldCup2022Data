@@ -284,7 +284,7 @@ npm run app // or node ./index.js
 ]
 ```
 ## Max/Min players Data
-```
+```javascript
 EdgePlayersData: {
   maxHeight: [
     {
