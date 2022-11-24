@@ -16,6 +16,12 @@ npm run app // or node ./index.js
 ```
 
 # Team average data calculate by this script
-[Visit Here / Docs folder](docs/index.md)
+- [Visit Here / Docs folder](docs/index.md)
 
-[https://fishenal.github.io/worldCup2022Data/](https://fishenal.github.io/worldCup2022Data/)
+- [https://fishenal.github.io/worldCup2022Data/](https://fishenal.github.io/worldCup2022Data/)
+
+# 32 Team Squads Data with fine page display
+- [HTML page(without image)](all_players.html)
+- [HTML page(with image)](all_players_with_image.html)
+  - *WARNING: make sure using lastest version browser, otherwise it maybe cause your computer crash.
+  - Capacity Check here: https://caniuse.com/loading-lazy-attr

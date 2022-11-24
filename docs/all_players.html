@@ -28,17 +28,35 @@
         .avatar {
             width: 100%;
         }
+        .title {
+            padding: 0 15px;
+        }
+        #menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            opacity: .8;
+        }
+        #root {
+            padding-top: 40px;
+        }
     </style>
 </head>
 
 <body>
     <div id="root"></div>
+    <div id="menu"></div>
     <script>
         (function(){
             Object.keys(squads).forEach((k) => {
                 console.log(k)
                 $('#root').append(`<h1 id='${k}' class='title'>${k}</h1>`)
                 $('#root').append(`<div id='${k}-wrap' class='wrap'></div>`)
+                $(`#menu`).append(`
+                    <a href='#${k}'>${k}</a>
+                `)
                 squads[k].forEach((p) => {
                     $(`#${k}-wrap`).append(`
                         <div class='player-wrap'>
