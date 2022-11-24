@@ -13,3 +13,5 @@ npm run app // or node ./index.js
 
 # Team average data calculate by this script
 [Visit Here / Docs folder](docs/index.md)
+
+[https://fishenal.github.io/worldCup2022Data/](https://fishenal.github.io/worldCup2022Data/)
