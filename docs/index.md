@@ -6,3 +6,4 @@
 - [Highest & Shortest Player](highest_shortest.md)
 - [Heaviest & Lightest Player](heaviest_lightest.md)
 - [Youngest & Oldest Player](youngest_oldest.md)
+- [32 Teams Squads](../solvedData/squadsData.json)
