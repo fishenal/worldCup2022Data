@@ -153,8 +153,24 @@ fs.readFile("./worldcup.json", "utf8", (err, jsonString) => {
         return Number(a[1].averageAge) - Number(b[1].averageAge);
     });
     // console.log("Average data:", averageData);
-    console.log("Edge players data:", players);
-    // console.log('%c [ sortByHeight ]-54', 'font-size:13px; background:pink; color:#bf2c9f;', sortByHeight)
-    // console.log('%c [ sortByWeight ]-58', 'font-size:13px; background:pink; color:#bf2c9f;', sortByWeight)
-    // console.log('%c [ sortByAge ]-77', 'font-size:13px; background:pink; color:#bf2c9f;', sortByAge)
+    // console.log("Edge players data:", players);
+    fs.writeFile('./solvedData/maxMinData.json', JSON.stringify(players, null, 2), err => {
+        if (err) {
+            console.log('Error writing file', err)
+        } else {
+            console.log('Successfully wrote file')
+        }
+    })
+    fs.writeFile('./solvedData/averageData.json', JSON.stringify({
+        averageData,
+        sortByHeight,
+        sortByWeight,
+        sortByAge,
+    }, null, 2), err => {
+        if (err) {
+            console.log('Error writing file', err)
+        } else {
+            console.log('Successfully wrote file')
+        }
+    })
 });
